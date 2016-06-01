@@ -1,7 +1,12 @@
+ <%= link_to "All restaurants", restaurants_path, {class: "btn btn-primary"} %>
+  <% @restaurants.each do |restaurant| %>
+   <%= link_to restaurant.name, restaurant_path(restaurant), {class: "btn btn-primary"} %>
+   <% end %>
+
  <% @restaurants.each do |task| %>
-  <h2><%= task.name %></h2>
-   <p><%= task.address %></p>
-     <p><%= task.phone_number %></p>
-       <p><%= task.category %></p>
-   
- <% end %>
+  <h2 class="nam"><%= task.name %></h2>
+   <p class="nam"><%= task.address %></p>
+     <p class="nam"><%= task.phone_number %></p>
+       <p class="nam"><%= task.category %></p>
+       <%= image_tag "logo.jpg", {class: "img-circle", id: "logo"}%>
+   <% end %>

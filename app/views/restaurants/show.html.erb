@@ -4,3 +4,6 @@
 <p class="nam"><%= @restaurant.phone_number %></p>
 <p class="nam"><%= @restaurant.category %></p>
 <%= image_tag "logo.jpg", {class: "img-circle", id: "logo"}%>
+<%= link_to "Delete", restaurant_path(@restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
